@@ -1,7 +1,8 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+const React = require('react');
+const config = require('./gatsby-config');
 
-// You can delete this file if you're not using it
+exports.onRenderBody = ({ pathname, setPostBodyComponents }) => {
+	setPostBodyComponents([
+		<script src="https://rumbletalk.com/client/?DDxaq3_r"></script>,
+	]);
+};
