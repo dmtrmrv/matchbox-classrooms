@@ -8,19 +8,14 @@ export default function Template({ data }) {
         title,
         vimeoID,
         chatRoomID,
-        chatClientID,
       },
     },
   } = data;
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <p>{title}</p>
-        <p>{vimeoID}</p>
-        <p>{chatRoomID}</p>
-        <p>{chatClientID}</p>
-        <div id={chatRoomID} />
-      </div>
+    <div>
+      <p>{title}</p>
+      <p>{vimeoID}</p>
+      <div id={chatRoomID} />
     </div>
   );
 }
@@ -33,7 +28,6 @@ export const pageQuery = graphql`
         title
         vimeoID
         chatRoomID
-        chatClientID
       }
     }
   }
