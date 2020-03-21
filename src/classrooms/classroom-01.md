@@ -1,9 +1,6 @@
 ---
 path: "/classrooms/db23efd1f38e454785c34048ae863d59"
 title: "Classroom Title"
+vimeoID: "397673759"
+chatRoomID: "rt-841389e266e0a9c74dd2f83b2a1779c8"
 ---
-
-
-`vimeo: 5299404`
-
-<div id="rt-841389e266e0a9c74dd2f83b2a1779c8"></div>

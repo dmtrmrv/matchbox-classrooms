@@ -1,11 +1,11 @@
-const path = require(`path`)
+const path = require('path');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-	const { createPage } = actions
+  const { createPage } = actions;
 
-	const classroomTemplate = path.resolve(`src/templates/classroom.js`)
+  const classroomTemplate = path.resolve('src/templates/classroom.js');
 
-	const result = await graphql(`
+  const result = await graphql(`
     {
       allMarkdownRemark(
         limit: 1000
@@ -19,19 +19,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `)
+  `);
 
-	// Handle errors
-	if (result.errors) {
-		reporter.panicOnBuild(`Error while running GraphQL query.`)
-		return
-	}
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild('Error while running GraphQL query.');
+    return;
+  }
 
-	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-		createPage({
-			path: node.frontmatter.path,
-			component: classroomTemplate,
-			context: {}, // additional data can be passed via context
-		})
-	})
-}
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: classroomTemplate,
+      context: {}, // additional data can be passed via context
+    });
+  });
+};
