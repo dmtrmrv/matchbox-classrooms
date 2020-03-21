@@ -15,7 +15,8 @@ export default function Template({ data }) {
     <div>
       <p>{title}</p>
       <p>{vimeoID}</p>
-      <div id={chatRoomID} />
+      <iframe src="https://player.vimeo.com/video/396392696?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <div id={chatRoomID} ></div>
     </div>
   );
 }
