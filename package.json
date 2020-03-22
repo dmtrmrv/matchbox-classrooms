@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "matchbox-classrooms",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Matchbox Virtual Media Classrooms",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dmitry Mayorov <iamdmitrymayorov@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "gatsby": "^2.19.45",
@@ -31,9 +31,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -41,14 +38,10 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/dmtrmrv/matchbox-classrooms"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
 }

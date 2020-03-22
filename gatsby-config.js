@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Matchbox',
-    description: 'Matchbox Classroom Environment',
-    author: 'Matchbox',
-    rumbleTalkClientID: 'DDxaq3_r',
+    title: 'Matchbox Classrooms',
+    description: 'Learning Environment',
+    author: 'Matchbox Virtual Media',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,41 +11,21 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'classrooms',
         path: `${__dirname}/src/classrooms`,
       },
     },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-embed-video',
-            options: {
-              width: 800,
-              noIframeBorder: true, // Optional: Disable insertion of <style> border: 0
-            },
-          },
-        ],
-      },
-    },
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'matchbox-virtual-media',
+        short_name: 'matchbox',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#980500',
+        theme_color: '#fff',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/matchbox-icon.png', // This path is relative to the root of the site.
       },
     },
   ],
