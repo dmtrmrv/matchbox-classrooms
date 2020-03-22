@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
@@ -6,6 +6,8 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 export default function Template({ data }) {
+  const chatWrapRef = useRef(null);
+
   const {
     markdownRemark: {
       frontmatter: {
@@ -16,12 +18,22 @@ export default function Template({ data }) {
       },
     },
   } = data;
+
+  useEffect(() => {
+    const script = document.createElement('script');
+
+    script.src = `https://rumbletalk.com/client/?${rtClientID}`;
+    console.log(script);
+
+    chatWrapRef.current.appendChild(script);
+  }, []);
+
   return (
     <Layout>
       <SEO title={title} />
       <div className="container">
         <div className="row">
-          <div className="col col-md-8">
+          <div className="col-md-8">
             <div className="video-wrap">
               <iframe
                 title={title}
@@ -34,12 +46,12 @@ export default function Template({ data }) {
               />
             </div>
           </div>
-          <div className="col col-md-4">
-            <div className="chat-wrap">
+          <div className="col-md-4">
+            <div className="chat-wrap" ref={chatWrapRef}>
               <div id={rtRoomID} />
-              <Helmet>
+              {/* <Helmet>
                 <script src={`https://rumbletalk.com/client/?${rtClientID}`} />
-              </Helmet>
+              </Helmet> */}
             </div>
           </div>
         </div>
