@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -17,17 +18,26 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title={title} />
-      <div>
-        <iframe
-          title={title}
-          src={`https://player.vimeo.com/video/${vimeoID}?title=0&byline=0&portrait=0`}
-          width="800"
-          height="450"
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          allowFullScreen
-        />
-        <div id={chatRoomID} />
+      <div className="container">
+        <div className="row">
+          <div className="col col-md-8">
+            <iframe
+              title={title}
+              src={`https://player.vimeo.com/video/${vimeoID}?title=0&byline=0&portrait=0`}
+              width="800"
+              height="450"
+              frameBorder="0"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            />
+          </div>
+          <div className="col col-md-4">
+            <div id={chatRoomID} />
+            <Helmet>
+              <script src="https://rumbletalk.com/client/?DDxaq3_r" />
+            </Helmet>
+          </div>
+        </div>
       </div>
     </Layout>
   );
