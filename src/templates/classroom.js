@@ -11,7 +11,8 @@ export default function Template({ data }) {
       frontmatter: {
         title,
         vimeoID,
-        chatRoomID,
+        rtRoomID,
+        rtClientID,
       },
     },
   } = data;
@@ -21,21 +22,25 @@ export default function Template({ data }) {
       <div className="container">
         <div className="row">
           <div className="col col-md-8">
-            <iframe
-              title={title}
-              src={`https://player.vimeo.com/video/${vimeoID}?title=0&byline=0&portrait=0`}
-              width="800"
-              height="450"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-            />
+            <div className="video-wrap">
+              <iframe
+                title={title}
+                src={`https://player.vimeo.com/video/${vimeoID}?title=0&byline=0&portrait=0`}
+                width="800"
+                height="450"
+                frameBorder="0"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            </div>
           </div>
           <div className="col col-md-4">
-            <div id={chatRoomID} />
-            <Helmet>
-              <script src="https://rumbletalk.com/client/?DDxaq3_r" />
-            </Helmet>
+            <div className="chat-wrap">
+              <div id={rtRoomID} />
+              <Helmet>
+                <script src={`https://rumbletalk.com/client/?${rtClientID}`} />
+              </Helmet>
+            </div>
           </div>
         </div>
       </div>
@@ -50,7 +55,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         vimeoID
-        chatRoomID
+        rtRoomID
+        rtClientID
       }
     }
   }

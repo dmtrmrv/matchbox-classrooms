@@ -1,0 +1,20 @@
+.video-wrap {
+  margin-top: 30px;
+  background-color: #000;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  position: relative;
+}
+
+.video-wrap iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.chat-wrap {
+  height: 100%;
+  margin-top: 30px;
+}
