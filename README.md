@@ -34,10 +34,22 @@ rtClientID: "XXXXXXXX"
 ---
 ```
 
-`path` is the part of the URL where the classroom is hosted. If your site URL is `https://example.com`, given the code sample above the classroom will be hosted at `https://example.com/classrooms/dbPtHp3qa3zwzweyD5Gn`. I recommend generating URLs using sites like [random.org](https://www.random.org/strings/).
+## `path`
 
-`title` is the name of the classroom used in the browser tab.
+Part of the URL where the classroom is hosted. If your site URL is `https://example.com`, given the code sample above the classroom will be hosted at `https://example.com/classrooms/dbPtHp3qa3zwzweyD5Gn`. I recommend generating URLs using sites like [random.org](https://www.random.org/strings/).
 
-`vimeoID` is the ID of the video that can be found in the URL.
+## `title`
 
-`rtRoomID` and `rtClientID` are the IDs that can be found in the RumbleTalk embed code.
+Name of the classroom used in the browser tab.
+
+## `vimeoID`
+
+ID of the video that can be found in the URL.
+
+![ID of the video on vimeo](https://github.com/dmtrmrv/matchbox-classrooms/blob/master/manual/vimeo.png?raw=true)
+
+## `rtRoomID` and `rtClientID`
+
+IDs that can be found in the RumbleTalk embed code.
+
+![RumbleTalk IDs](https://github.com/dmtrmrv/matchbox-classrooms/blob/master/manual/rumbletalk-ids.png?raw=true)
